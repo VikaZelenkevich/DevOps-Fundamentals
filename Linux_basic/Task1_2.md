@@ -11,14 +11,14 @@
 ```
 #### In ubuntu terminal: 
 ```bash
+  # Set password for John
+  sudo passwd John
   sudo mkdir -p /home/Raymond/.ssh
   # Using nano editor we paste public key content
   sudo nano /home/Raymond/.ssh/authorized_keys
   sudo chmod 700 /home/Raymond/.ssh
   sudo chmod 600 /home/Raymond/.ssh/authorized_keys
   sudo nano /etc/ssh/sshd_config
-  # Set password for John
-  sudo passwd John
 ```
 #### In nano editor paste this: 
 ```  
