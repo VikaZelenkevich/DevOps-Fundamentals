@@ -49,5 +49,20 @@
 ```
 ### 4. Зарегистрироваться в двух публичных хостингах git-репозиториев bitbucket и github. Доступ к devops-gitlab.inno.ws ты должен был получить в начале курса. Если возникли какие-то проблемы с доступом, свяжись с ментором.
 ### 5. Создать на каждом из хостингов репозиторий devops-task1; bitbucket и github - публичные (public) репозитории, devops-gitlab.inno.ws - внутренний (internal). В репозиторий, созданный в первом задании, добавить 3 удаленных сервера с помощью git remote add. Загрузить репозиторий во все git-хостинги с помощью git push.
+```powershell
+  # Add all 3 remotes
+  git remote add github https://github.com/yourusername/devops-task1.git
+  git remote add gitlab https://devops-gitlab.inno.ws/yourusername/devops-task1.git
+  # Push to all
+  git push github master
+  git push gitlab master
+```
 ### 6. Клонировать репозиторий. Переключиться на 3-й от начала коммит (e8b3ec06b). Просмотреть содержимое файла deleted.txt.
+```powershell
+  git clone https://github.com/yourusername/devops-task1.git cloned-repo
+  cd cloned-repo
+  git log --oneline
+  # Find 3rd commit hash (e.g., 08574a8). Switches to the commit with hash 08574a8, this puts the repo in a detached HEAD state (you’re not on a branch anymore).
+  git checkout 08574a8
+```
 ### 7. Проверить, что все созданные репозитории публичные, кроме репозитория на devops-gitlab.inno.ws.
