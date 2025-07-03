@@ -4,7 +4,7 @@
   docker --version
   # Start recording terminal output to a file
   Start-Transcript -Path ./docker-log.txt
-  # When you open http://localhost:28080 in your browser, It goes to your machine's port 28080, Docker forwards that traffic into the container’s port 80,And Nginx handles the request inside the container.
+  # When you open http://localhost:28080 in your browser, It goes to your machine's port 28080, Docker forwards that traffic into the container’s port 80,And Nginx handles the request inside the container. -d flag stands for detached mode (in background, so you don't see logs in terminal in real time)
   docker run -d -p 127.0.0.1:28080:80 --name rbm-dkr-01 nginx:stable
   # Check if the container is running
   docker ps
